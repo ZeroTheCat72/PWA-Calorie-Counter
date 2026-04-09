@@ -34,7 +34,7 @@ let startingIndex = 0;
 
 
 
-function search(query, start = 0, end = 12, reset = true) {
+function search(query, start = 0, end = 300, reset = true) {
     const regex = / /g;
     fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${query.replaceAll(regex, '%20')}&dataType=Foundation&api_key=${localStorage.getItem('APIkey')}`)
         .then((response) => response.json())
