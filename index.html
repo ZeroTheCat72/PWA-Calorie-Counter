@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PWA Calorie Counter</title>
+    <script>navigator.serviceWorker.register("service-worker.js")</script> 
+    <link rel="manifest" href="manifest.json" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/icon_192.png" />
+    </head>
+
+    <body>
+        <main>
+            <div id="notch"></div>
+            <div id="mainFR">
+                <div id='searchDiv'>
+                    <h1 id="title">PWA Calorie Counter</h1>
+                    <input type="text" id="searchBar"/>
+                    <p id="attribution">Powered by the <a class="red" target="_blank" href="https://fdc.nal.usda.gov/">USDA Food Data Central API</a></p>
+                </div>
+                <div id="results">
+
+                </div>
+                
+            </div>
+        <footer>
+            <p>This is a Project. Still in Beta.</p>
+            <p>Check out my <a href="https://github.com/ZeroTheCat72">Github</a>!</p>
+        </footer>
+        </main>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
