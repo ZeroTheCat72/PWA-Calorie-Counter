@@ -77,6 +77,7 @@ submitKeyBtn.addEventListener('click', () => {
     localStorage.setItem('APIkey', apiKeyInput.value);
     apiKeyGetterWindow.style.display = 'none';
     actualAppElement.style.display = 'block';
+    apiKeyInput.value = ''
     submitKeyBtn.blur();
 })
 
