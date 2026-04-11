@@ -80,4 +80,8 @@ submitKeyBtn.addEventListener('click', () => {
     submitKeyBtn.blur();
 })
 
-resetAPIkeyBtn.addEventListener('click', () => {localStorage.clear()});
+resetAPIkeyBtn.addEventListener('click', () => {
+    localStorage.clear();
+    actualAppElement.style.display = 'none';
+    apiKeyGetterWindow.style.display = 'block';
+});
