@@ -6,6 +6,7 @@ main {
     max-width: 350px;
     border-radius: 30px;
     aspect-ratio: 9/19.5;
+    max-height: 758px;
 }
 
 body {
@@ -93,6 +94,15 @@ body {
     padding: 8px 0;
     color: blue;
     font-size: 16px;
+    
+}
+
+#resetAPIkey {margin-top: 10px}
+
+#getKeyWindow article {
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /*Split*/
@@ -105,7 +115,7 @@ body {
 .result h2 {
     color: rgb(255, 255, 255);
 }
-.red {color: red;}
+.red {color: red !important;}
 
 .yellow {color: yellow;}
 
@@ -119,7 +129,7 @@ body {
 .result {
     width: 90%;
     border: 1px solid rgb(41, 41, 41);
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: rgb(41, 41, 41);
     color: rgb(255, 255, 255);
 }

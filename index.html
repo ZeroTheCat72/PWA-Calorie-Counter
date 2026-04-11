@@ -21,19 +21,27 @@
                 <div id="results">
 
                 </div>
-                <button class="inputUniversal universal" id="resetAPIkey">Reset API key</button>
+                <button class="inputUniversal universal red" id="resetAPIkey">Reset API key</button>
             </div>
 
             <div id='getKeyWindow'>
                 <h1>PWA Calorie Counter</h1>
                 <input class='inputUniversal universal' type='text' id='apiKeyInput' placeholder='Input an API key' />
+
+                <article>
                     <p>Heres how to get an API key of your own:</p>
                     <ol>
                         <li>Go to the <a class="red" target="_blank" href="https://fdc.nal.usda.gov/api-key-signup">this website</a> and input your email</li>
                         <li>You should get an email that has your key in it!</li>
                     </ol>
-                <h3>Why do we do this?</h3>
-                <p>Due to the nature of the API I can't just make it work magically, you have to get one from the website. It is free though!</p>
+                </article>
+
+                <article>
+                    <h3>What is an API key, and why do I have to do this?</h3>
+                    <p>an API key is a key used to access a server. Without it you can't really expect the app to function properly. This app simply
+                    fetches data from the server, so everyone must use their own key.</p>
+                </article>
+                
                     <button id='submitKeyBtn' class='inputUniversal universal'>Submit</button>
             </div>
 
