@@ -20,6 +20,7 @@ const resultsDiv = document.getElementById('results');
 const searchBar = document.getElementById('searchBar');
 let dataO = undefined;
 let startingIndex = 0;
+const resetAPIkeyBtn = document.getElementById('resetAPIkey');
 
 localStorage.getItem('APIkey') == null ? apiKeyGetterWindow.style.display = 'flex' : actualAppElement.style.display = 'block';
 
@@ -78,3 +79,5 @@ submitKeyBtn.addEventListener('click', () => {
     actualAppElement.style.display = 'block';
     submitKeyBtn.blur();
 })
+
+resetAPIkeyBtn.addEventListener('click', () => {localStorage.clear()});
