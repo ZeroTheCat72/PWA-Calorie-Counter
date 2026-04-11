@@ -21,14 +21,19 @@
                 <div id="results">
 
                 </div>
-                <button class="inputUniversal" id="resetAPIkey">Reset API key</button>
+                <button class="inputUniversal universal" id="resetAPIkey">Reset API key</button>
             </div>
 
             <div id='getKeyWindow'>
-                <input class='inputUniversal universal' type='text' id='apiKeyInput'/>
-                    <p>Warning: You must input the API key EXACTLY as it is, otherwise if the app doesnt function reset the site's cache!
-                        Also refresh when you input it successfully!</p>
-                    <p>Design overhaul for API key input planned!</p>
+                <h1>PWA Calorie Counter</h1>
+                <input class='inputUniversal universal' type='text' id='apiKeyInput' placeholder='Input an API key' />
+                    <p>Heres how to get an API key of your own:</p>
+                    <ol>
+                        <li>Go to the <a class="red" target="_blank" href="https://fdc.nal.usda.gov/api-key-signup">this website</a> and input your email</li>
+                        <li>You should get an email that has your key in it!</li>
+                    </ol>
+                <h3>Why do we do this?</h3>
+                <p>Due to the nature of the API I can't just make it work magically, you have to get one from the website. It is free though!</p>
                     <button id='submitKeyBtn' class='inputUniversal universal'>Submit</button>
             </div>
 

@@ -22,7 +22,7 @@ let dataO = undefined;
 let startingIndex = 0;
 const resetAPIkeyBtn = document.getElementById('resetAPIkey');
 
-localStorage.getItem('APIkey') == null ? apiKeyGetterWindow.style.display = 'flex' : actualAppElement.style.display = 'block';
+localStorage.getItem('APIkey') == null ? apiKeyGetterWindow.style.display = 'flex' : actualAppElement.style.display = 'flex';
 
 console.log('hello', localStorage.getItem('APIkey'))
 
@@ -76,7 +76,7 @@ searchBar.addEventListener('blur', () => {
 submitKeyBtn.addEventListener('click', () => {
     localStorage.setItem('APIkey', apiKeyInput.value);
     apiKeyGetterWindow.style.display = 'none';
-    actualAppElement.style.display = 'block';
+    actualAppElement.style.display = 'flex';
     apiKeyInput.value = ''
     submitKeyBtn.blur();
 })
@@ -84,5 +84,5 @@ submitKeyBtn.addEventListener('click', () => {
 resetAPIkeyBtn.addEventListener('click', () => {
     localStorage.clear();
     actualAppElement.style.display = 'none';
-    apiKeyGetterWindow.style.display = 'block';
+    apiKeyGetterWindow.style.display = 'flex';
 });
