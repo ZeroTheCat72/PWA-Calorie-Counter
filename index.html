@@ -15,7 +15,7 @@
             <div id="mainFR">
                 <div id='searchDiv'>
                     <h1 id="title">PWA Calorie Counter</h1>
-                    <input type="text" id="searchBar"/>
+                    <input class="inputUniversal" type="text" id="searchBar"/>
                     <p id="attribution">Powered by the <a class="red" target="_blank" href="https://fdc.nal.usda.gov/">USDA Food Data Central API</a></p>
                 </div>
                 <div id="results">
@@ -23,6 +23,15 @@
                 </div>
                 
             </div>
+
+            <div id='getKeyWindow'>
+                <input class='inputUniversal universal' type='text' id='apiKeyInput'/>
+                    <p>Warning: You must input the API key EXACTLY as it is, otherwise if the app doesnt function reset the site's cache!
+                        Also refresh when you input it successfully!</p>
+                    <p>Design overhaul for API key input planned!</p>
+                    <button id='submitKeyBtn' class='inputUniversal universal'>Submit</button>
+            </div>
+
         <footer>
             <p>This is a Project. Still in Beta.</p>
             <p>Check out my <a target="_blank" href="https://github.com/ZeroTheCat72">Github</a>!</p>

@@ -9,15 +9,9 @@ main {
     background-color: rgb(16, 16, 16);
     max-width: 350px;
     border-radius: 30px;
+    aspect-ratio: 9/19.5;
 }
-#results::-webkit-scrollbar {display: none;}
-#notch {
-    width: 70%;
-    height: 30px;
-    background-color: black;
-    margin: 0 auto;
-    border-radius: 0 0 15px 15px;
-}
+
 body {
     display: flex;
     background-color: rgb(41, 41, 41);
@@ -26,6 +20,8 @@ body {
     align-content: center;
     font-family:'Segoe UI', Helvetica, Geneva, Verdana, sans-serif;
 }
+
+/*Split*/
 
 #searchBar {
     width: 90%;
@@ -42,51 +38,59 @@ body {
     border-color: rgb(42, 42, 42);
 }
 
-.result {
-    width: 90%;
-    border: 1px solid rgb(41, 41, 41);
-    border-radius: 12px;
-    background-color: rgb(42, 42, 42);
-    color: rgb(255, 255, 255);
-}
-
-#results {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items:center;
-    max-height: 430px;
-    height: 430px;
-    gap: 6px;
-    margin: auto;
-    padding-top: 5px;
-    overflow-y: scroll;
-}
-
-@media screen and (max-width: 767px) {
-    main {
-        border: 0;
-        width: 100%;
-        max-width: unset;
-        border-radius: 0;
-        background-color: black;
-        height: unset;
-    }
-    #notch {display: none;}
-    body {
-        display: block;
-        background-color: black;
-    }
-    #notice {display: none;}
-}
-
 #searchDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 #attribution {font-size: 13px;}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items:center;
+    height: 430px;
+    max-height: 430px;
+    gap: 6px;
+    margin: auto;
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+
+#results::-webkit-scrollbar {display: none;}
+
+#notch {
+    width: 70%;
+    height: 30px;
+    background-color: black;
+    margin: 0 auto;
+    border-radius: 0 0 15px 15px;
+}
+
+#title {text-align: center;}
+
+#apiKeyInput {
+    width: 70%;
+    padding: 6px 0;
+    margin: 4px auto;
+    text-align: center;
+}
+
+#mainFR {
+    display: none;
+}
+
+#getKeyWindow {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Split*/
+
 .foodCategory {
     font-size: 12px;
     padding-left: 5px;
@@ -96,6 +100,7 @@ body {
     color: rgb(255, 255, 255);
 }
 .red {color: red;}
+
 .yellow {color: yellow;}
 
 .ingBtn {
@@ -104,4 +109,46 @@ body {
     width: fit-content;
     margin: 5px auto;
 }
-#title {text-align: center;}
+
+.result {
+    width: 90%;
+    border: 1px solid rgb(41, 41, 41);
+    border-radius: 12px;
+    background-color: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
+}
+
+.universal {
+    background-color: rgb(41, 41, 41);
+    border: rgb(41, 41, 41);
+    color: white;
+    border-radius: 16px;
+}
+.inputUniversal {
+    padding: 2px 10px;
+}
+.inputUniversal:webkit-autofill  {
+    -webkit-text-fill-color: white;
+    background-color: rgb(41, 41, 41);
+}
+
+/*Split*/
+
+@media screen and (max-width: 767px) {
+    main {
+        border: 0;
+        width: 100%;
+        max-width: unset;
+        border-radius: 0;
+        background-color: black;
+        height: unset;
+        min-height: none;
+        aspect-ratio: none;
+    }
+    #notch {display: none;}
+    body {
+        display: block;
+        background-color: black;
+    }
+    #notice {display: none;}
+}

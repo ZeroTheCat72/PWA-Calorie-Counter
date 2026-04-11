@@ -2,35 +2,29 @@
  * Tasks:
  * Make it PWA compatible (its in the name dude 😭) CHECK
  * Learn Javascript Async (thats the backbone of the whole thing u jus have an iPhone now 😭) CHECK
- * Make it responsive
- * MEOW
+ * Make it responsive CHECK
+ * MEOW CHECK
+ * rewrite/format Spaghetti code CHECK
+ * redesign API key input screen CHECK
+ * 
+ * The Plan:
+ * Rewrite all the spaghetti code that is the api key getter inside the main element. CHECK
  */
 
 let mainWindow = document.querySelector('main');
-
-if (localStorage.getItem('APIkey') == null) {
-    console.log('no key')
-    mainWindow.style.display = 'none';
-    document.querySelector('body').innerHTML += `<div id='getKey'><input style='width: 90%; padding: 12px 0;' type='text' id='apiKeyGetter'/>
-    <p>Warning: You must input the API key EXACTLY as it is, otherwise if the app doesnt function reset the site's cache! Also refresh when you input it successfully!</p>
-    <p>Design overhaul for API key input planned!</p>
-    <button type='submit'>Submit</button></div>`;
-    const apiKeyGetter = document.getElementById('apiKeyGetter');
-    document.querySelector('button').addEventListener('click', () => {
-        localStorage.setItem('APIkey', apiKeyGetter.value);
-        console.log(localStorage.getItem('APIkey'));
-        document.getElementById('getKey').style.display = 'none';
-    });
-    apiKeyGetter.style.disp
-    mainWindow.style.display = 'block';
-
-}
-console.log('hello', localStorage.getItem('APIkey'))
-
+const actualAppElement = document.getElementById('mainFR');
+const apiKeyGetterWindow = document.getElementById('getKeyWindow');
+const submitKeyBtn = document.getElementById('submitKeyBtn');
+const apiKeyInput = document.getElementById('apiKeyInput');
 const resultsDiv = document.getElementById('results');
 const searchBar = document.getElementById('searchBar');
 let dataO = undefined;
 let startingIndex = 0;
+
+localStorage.getItem('APIkey') == null ? apiKeyGetterWindow.style.display = 'flex' : actualAppElement.style.display = 'block';
+
+console.log('hello', localStorage.getItem('APIkey'))
+
 
 
 
@@ -61,8 +55,26 @@ function search(query, start = 0, end = 300, reset = true) {
     
 }
 
-searchBar.addEventListener('change', (e) => {
-    e.preventDefault();
+// event Listeners
+
+searchBar.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter') {
+    console.log('YES', searchBar.value);
+    search(searchBar.value);
+    searchBar.blur();
+    }
+})
+
+searchBar.addEventListener('blur', () => {
     console.log('YES', searchBar.value);
     search(searchBar.value)
+    searchBar.blur();
+})
+
+
+submitKeyBtn.addEventListener('click', () => {
+    localStorage.setItem('APIkey', apiKeyInput.value);
+    apiKeyGetterWindow.style.display = 'none';
+    actualAppElement.style.display = 'block';
+    submitKeyBtn.blur();
 })
